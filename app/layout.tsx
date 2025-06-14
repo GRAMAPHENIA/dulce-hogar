@@ -73,9 +73,9 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold mb-4">Contacto</h3>
                 <ul className="space-y-2 text-gray-400">
-                  <li>📧 info@dulcehogar.com</li>
-                  <li>📞 +1 (555) 123-4567</li>
-                  <li>📍 123 Calle Principal, Ciudad</li>
+                  <li>Instagram</li>
+                  <li>Facebook</li>
+                  <li>Whatsapp</li>
                 </ul>
               </div>
             </div>

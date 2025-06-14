@@ -18,20 +18,17 @@ export default function Navbar() {
   if (!mounted) {
     // Renderizar un placeholder simple mientras se monta
     return (
-      <nav className="sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-gray-200">
+      <nav className="sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-gray-200/20">
         <div className="h-16"></div>
       </nav>
     )
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-gray-200">
+    <nav className="sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-gray-200/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
-            {/* <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">🧁</span>
-            </div> */}
             <span className="font-bold text-xl text-gray-900">DH</span>
           </Link>
 

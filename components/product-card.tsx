@@ -28,7 +28,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
       <Link href={`/product/${product.id}`}>
         <div className="relative">
           <Image
@@ -36,7 +36,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={product.name}
             width={300}
             height={300}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-48 object-cover"
           />
           <Button
             variant="ghost"
@@ -52,13 +52,21 @@ export default function ProductCard({ product }: ProductCardProps) {
           </Button>
         </div>
         <CardContent className="p-4">
-          <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+          <h3 className="font-semibold text-lg text-gray-900/70 mb-2 group-hover:text-gray-900/90 transition-colors">
             {product.name}
           </h3>
-          <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
+          <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+            {product.description}
+          </p>
           <div className="flex items-center justify-between">
-            <span className="text-2xl font-bold text-orange-600">${product.price.toFixed(2)}</span>
-            <Button onClick={handleAddToCart} size="sm" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <span className="text-2xl font-bold text-gray-900/70">
+              ${product.price.toFixed(2)}
+            </span>
+            <Button
+              onClick={handleAddToCart}
+              size="sm"
+              className="text-zinc-100 font-semibold sm:w-auto backdrop-blur-md bg-gray-900/90 hover:bg-gray-900"
+            >
               <ShoppingCart className="w-4 h-4 mr-1" />
               Agregar
             </Button>
@@ -66,5 +74,5 @@ export default function ProductCard({ product }: ProductCardProps) {
         </CardContent>
       </Link>
     </Card>
-  )
+  );
 }

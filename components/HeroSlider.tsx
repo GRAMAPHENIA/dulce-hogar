@@ -45,13 +45,13 @@ export default function HeroSlider() {
           src={src}
           alt={`Galleta ${idx + 1}`}
           className={`transition-opacity duration-1000 absolute w-full h-full object-cover top-0 left-0 ${
-            idx === current ? "opacity-100" : "opacity-0"
+            idx === current ? "opacity-70" : "opacity-0"
           }`}
           draggable={false}
         />
       ))}
       {/* Overlay para oscurecer el fondo y que el texto sea legible */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-200/70 to-pink-300/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/70 to-rose-400/70 "></div>
       {/* Flechas */}
       {/* <button
         aria-label="Anterior"

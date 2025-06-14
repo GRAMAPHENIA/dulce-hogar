@@ -54,7 +54,7 @@ export default function CartPage() {
             {cart.map((item) => (
               <Card key={item.id}>
                 <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col md:flex-row items-center space-x-4">
                     <div className="flex-shrink-0">
                       <Image
                         src={item.image || "/placeholder.svg"}
@@ -71,7 +71,7 @@ export default function CartPage() {
                       <p className="text-xl font-bold text-orange-600">${item.price.toFixed(2)}</p>
                     </div>
 
-                    <div className="flex items-center space-x-3">
+                    <div className="flex flex-col sm:flex-row items-end sm:items-center gap-3 mt-2 sm:mt-0">
                       {/* Quantity Controls */}
                       <div className="flex items-center border rounded-lg">
                         <Button
@@ -104,9 +104,10 @@ export default function CartPage() {
                         variant="ghost"
                         size="sm"
                         onClick={() => removeFromCart(item.id)}
-                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                        className="text-red-500 hover:text-red-700 hover:bg-red-50 w-full sm:w-auto justify-center"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-4 h-4 mr-1" />
+                        <span className="sm:hidden">Eliminar</span>
                       </Button>
                     </div>
                   </div>

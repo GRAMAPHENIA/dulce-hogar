@@ -14,17 +14,20 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-52 overflow-hidden bg-gradient-to-br from-orange-50 to-amber-200">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 to-amber-200">
         <HeroSlider />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 drop-shadow-lg">
-              Bienvenido a{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600">
+            <h1 className="text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-amber-900/50 to-orange-950/70 mb-20">
+              <span className="text-transparent text-4xl bg-clip-text bg-gradient-to-r from-amber-900/50 to-orange-950/70">
+                Bienvenidos a{" "}
+              </span>
+              <br />
+              <span className="text-transparent text-8xl md:text-9xl font-extrabold leading-tight bg-clip-text bg-gradient-to-r from-amber-900/50 to-orange-950/70 pb-2">
                 Dulce Hogar
               </span>
             </h1>
-            <p className="text-xl text-zinc-600 mb-8 max-w-2xl mx-auto drop-shadow">
+            <p className="text-xl text-zinc-800/80 mb-8 max-w-2xl mx-auto drop-shadow">
               Descubre nuestras deliciosas galletitas, muffins, tortas y
               pasteles artesanales. Hechos con amor y los mejores ingredientes.
             </p>
@@ -32,7 +35,7 @@ export default function HomePage() {
               <Link href="/catalog">
                 <Button
                   size="lg"
-                  className="bg-amber-600 hover:bg-amber-600/80 text-white transition-colors"
+                  className="w-full text-zinc-100 font-semibold sm:w-auto bg-opacity-10 backdrop-blur-md bg-white hover:bg-white hover:bg-opacity-20 hover:text-white"
                 >
                   Ver Catálogo
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -40,10 +43,9 @@ export default function HomePage() {
               </Link>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-amber-500 text-amber-900 hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                className="w-full text-zinc-100 font-semibold sm:w-auto bg-opacity-10 backdrop-blur-md bg-white hover:bg-white hover:bg-opacity-20 hover:text-white"
               >
-                Conoce Nuestra Historia
+                contactos
               </Button>
             </div>
           </div>
